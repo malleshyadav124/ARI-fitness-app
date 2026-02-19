@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+.glass-card {
+  @apply bg-card/80 border border-white/5 shadow-lg shadow-black/40 backdrop-blur-xl rounded-2xl;
+}
+
+.sidebar-item {
+  @apply flex items-center gap-3 px-4 py-2 text-sm font-medium rounded-xl cursor-pointer transition-colors;
+}
+
+.sidebar-item-active {
+  @apply bg-primary/10 text-primary;
+}
+
+.sidebar-item-inactive {
+  @apply text-muted-foreground hover:bg-muted/60;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+.animate-gradient-shift {
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
